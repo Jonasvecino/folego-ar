@@ -20,9 +20,14 @@
 <a-scene
   mindar-image="imageTargetSrc: ./targets%202.mind;"
   color-space="sRGB"
-  renderer="colorManagement: true, physicallyCorrectLights"
+  renderer="colorManagement: true"
   vr-mode-ui="enabled: false"
   device-orientation-permission-ui="enabled: false">
+
+  <a-assets>
+    <img id="fragEsq" src="./fragmentos-esq.png">
+    <img id="fragDir" src="./fragmentos-dir.png">
+  </a-assets>
 
   <a-camera
     position="0 0 0"
@@ -31,14 +36,55 @@
 
   <a-entity mindar-image-target="targetIndex: 0">
 
-    <a-text
-      value="FOLEGO"
-      color="white"
-      align="center"
-      width="2"
-      position="0 0.55 0.05"
-      animation="property: position; to: 0 0.65 0.05; dir: alternate; dur: 1800; loop: true; easing: easeInOutSine">
-    </a-text>
+    <a-image
+      src="#fragEsq"
+      width="1.38"
+      height="1.84"
+      position="-0.02 0 0.05"
+      rotation="-4 8 -2"
+      material="transparent: true; opacity: 0.78; alphaTest: 0.01"
+      animation__pos="
+        property: position;
+        from: -0.02 0 0.05;
+        to: -0.08 0.07 0.16;
+        dir: alternate;
+        dur: 3600;
+        loop: true;
+        easing: easeInOutSine"
+      animation__rot="
+        property: rotation;
+        from: -4 8 -2;
+        to: 5 18 3;
+        dir: alternate;
+        dur: 4700;
+        loop: true;
+        easing: easeInOutSine">
+    </a-image>
+
+    <a-image
+      src="#fragDir"
+      width="1.38"
+      height="1.84"
+      position="0.02 0 0.08"
+      rotation="3 -10 2"
+      material="transparent: true; opacity: 0.74; alphaTest: 0.01"
+      animation__pos="
+        property: position;
+        from: 0.02 0 0.08;
+        to: 0.09 0.08 0.22;
+        dir: alternate;
+        dur: 4200;
+        loop: true;
+        easing: easeInOutSine"
+      animation__rot="
+        property: rotation;
+        from: 3 -10 2;
+        to: -5 -20 -3;
+        dir: alternate;
+        dur: 5200;
+        loop: true;
+        easing: easeInOutSine">
+    </a-image>
 
   </a-entity>
 
