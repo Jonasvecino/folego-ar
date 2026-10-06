@@ -36,58 +36,65 @@
 
   <a-entity mindar-image-target="targetIndex: 0">
 
-    <!-- camada esquerda, mais perto do quadro -->
+    <!-- ESQUERDA: camada junto ao corpo -->
     <a-image
       src="#fragEsq"
-      width="1.38"
-      height="1.84"
-      position="0 0 0.035"
+      width="1.55"
+      height="2.05"
+      position="-0.03 0.00 0.03"
       rotation="0 0 0"
-      scale="1 1 1"
-      material="transparent: true; opacity: 0.76; alphaTest: 0.01"
-      animation__fade="
-        property: material.opacity;
-        from: 0.72;
-        to: 0.80;
-        dir: alternate;
-        dur: 2800;
-        loop: true;
-        easing: easeInOutSine"
-      animation__scale="
-        property: scale;
-        from: 1 1 1;
-        to: 1.01 1.01 1;
-        dir: alternate;
-        dur: 3200;
-        loop: true;
-        easing: easeInOutSine">
+      material="transparent: true; opacity: 0.82; alphaTest: 0.01">
     </a-image>
 
-    <!-- camada direita, um pouco mais à frente -->
+    <!-- ESQUERDA: camada intermédia -->
+    <a-image
+      src="#fragEsq"
+      width="1.25"
+      height="1.68"
+      position="-0.20 0.06 0.12"
+      rotation="4 10 -4"
+      material="transparent: true; opacity: 0.68; alphaTest: 0.01">
+    </a-image>
+
+    <!-- ESQUERDA: camada mais afastada -->
+    <a-image
+      src="#fragEsq"
+      width="0.92"
+      height="1.24"
+      position="-0.38 0.12 0.24"
+      rotation="8 18 -8"
+      material="transparent: true; opacity: 0.52; alphaTest: 0.01">
+    </a-image>
+
+
+    <!-- DIREITA: camada junto ao corpo -->
     <a-image
       src="#fragDir"
-      width="1.38"
-      height="1.84"
-      position="0 0 0.07"
+      width="1.50"
+      height="2.00"
+      position="0.03 0.00 0.05"
       rotation="0 0 0"
-      scale="1 1 1"
-      material="transparent: true; opacity: 0.70; alphaTest: 0.01"
-      animation__fade="
-        property: material.opacity;
-        from: 0.66;
-        to: 0.75;
-        dir: alternate;
-        dur: 3400;
-        loop: true;
-        easing: easeInOutSine"
-      animation__scale="
-        property: scale;
-        from: 1 1 1;
-        to: 1.015 1.015 1;
-        dir: alternate;
-        dur: 3600;
-        loop: true;
-        easing: easeInOutSine">
+      material="transparent: true; opacity: 0.80; alphaTest: 0.01">
+    </a-image>
+
+    <!-- DIREITA: camada intermédia -->
+    <a-image
+      src="#fragDir"
+      width="1.20"
+      height="1.60"
+      position="0.22 0.07 0.15"
+      rotation="-4 -12 5"
+      material="transparent: true; opacity: 0.66; alphaTest: 0.01">
+    </a-image>
+
+    <!-- DIREITA: camada mais afastada -->
+    <a-image
+      src="#fragDir"
+      width="0.88"
+      height="1.18"
+      position="0.40 0.13 0.28"
+      rotation="-8 -20 9"
+      material="transparent: true; opacity: 0.50; alphaTest: 0.01">
     </a-image>
 
   </a-entity>
